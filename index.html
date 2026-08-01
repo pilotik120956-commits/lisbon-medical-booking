@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lisbon Medical · Telegram Booking</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="language-bar">
+    <span><i class="fas fa-globe"></i> Language / Idioma / Мова / Sprache</span>
+    <div class="lang-buttons">
+      <button data-lang="en" class="active">🇬🇧 English</button>
+      <button data-lang="pt">🇵🇹 Português</button>
+      <button data-lang="pt-br">🇧🇷 Português (BR)</button>
+      <button data-lang="uk">🇺🇦 Українська</button>
+      <button data-lang="de">🇩🇪 Deutsch</button>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1 data-i18n="hero_title">📅 Lisbon Medical · Telegram Booking</h1>
+      <p class="subtitle" data-i18n="hero_sub">Fast, secure, and human — book your appointment in any clinic across Lisbon.</p>
+      <div class="price-tag">
+        <span data-i18n="price_label">Consultation fee</span>
+        <strong>≤ 50 €</strong>
+        <span data-i18n="price_note">(depends on the specialist)</span>
+      </div>
+      <a href="https://t.me/NataliiaBrovko" target="_blank" class="cta-button">
+        <i class="fab fa-telegram-plane"></i> <span data-i18n="cta_btn">Book via Telegram</span>
+      </a>
+    </div>
+    <div class="hero-image">
+      <i class="fas fa-stethoscope"></i>
+      <i class="fas fa-hospital"></i>
+      <i class="fas fa-phone-alt"></i>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="card">
+      <i class="fas fa-building"></i>
+      <h3 data-i18n="card1_title">All clinics in Lisbon</h3>
+      <p data-i18n="card1_desc">Public and private — we connect you with the right doctor, anywhere in the city.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-user-md"></i>
+      <h3 data-i18n="card2_title">Specialists</h3>
+      <p data-i18n="card2_desc">General practice, cardiology, dermatology, pediatrics, and more.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-clock"></i>
+      <h3 data-i18n="card3_title">Same‑day slots</h3>
+      <p data-i18n="card3_desc">We find the earliest available appointment that fits your schedule.</p>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2 data-i18n="how_title">⚡ How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <p data-i18n="step1">Click <strong>"Book via Telegram"</strong> or write to <strong>@NataliiaBrovko</strong>.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <p data-i18n="step2">Tell us your symptoms, preferred clinic, and time.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <p data-i18n="step3">We confirm the doctor, price (≤ 50€), and send you the booking.</p>
+      </div>
+    </div>
+    <div class="note-box">
+      <i class="fas fa-info-circle"></i>
+      <span data-i18n="note_box">📌 <strong>"Запис до лікаря Лісабон платно"</strong> — this means <em>"Paid doctor booking in Lisbon"</em>. The final cost depends on the consultation and clinic, but never exceeds 50 euros.</span>
+    </div>
+  </section>
+
+  <footer>
+    <p><i class="fab fa-telegram"></i> <a href="https://t.me/NataliiaBrovko" target="_blank">@NataliiaBrovko</a> · Lisbon, 2026</p>
+    <p data-i18n="footer_made">Made with ❤️ for easy healthcare access</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
