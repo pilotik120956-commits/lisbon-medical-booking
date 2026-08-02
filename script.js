@@ -1,44 +1,36 @@
 const translations = {
   en: {
-    // Theme
-    theme_btn: "Dark Mode",
-
-    // Language bar
+    theme_label: "Theme:",
+    theme_light: "Light",
+    theme_dark: "Dark",
     lang_label: "Language",
     lang_en: "English",
     lang_pt: "Português",
     lang_ptbr: "Português (BR)",
     lang_uk: "Українська",
     lang_de: "Deutsch",
-
-    // Hero
     hero_title: "📅 Lisbon Medical · Telegram Booking",
     hero_sub: "Appointment booking service for medical institutions in Lisbon.",
     price_label: "Consultation fee",
     price_note: "(depending on specialist)",
     cta_btn: "Book via Telegram",
-
-    // Features
     card1_title: "Lisbon Clinics",
     card1_desc: "Access to public and private healthcare facilities across the Lisbon metropolitan area.",
     card2_title: "Medical Specialists",
     card2_desc: "General practice, cardiology, dermatology, pediatrics, and other specialised fields.",
     card3_title: "Same‑day Appointments",
     card3_desc: "Selection of the earliest available time slot that meets patient requirements.",
-
-    // How it works
     how_title: "⚡ Service Procedure",
     step1: "Submit a booking request via Telegram @NataliiaBrovko.",
     step2: "Provide medical indication, preferred clinic, and available time.",
     step3: "Receive confirmation of specialist, fee (≤ 50€), and appointment details.",
     note_box: "📌 Запис до лікаря Лісабон платно — paid medical appointment booking service in Lisbon. The final fee depends on the consultation type and clinic, with a maximum of 50 euros.",
-
-    // Footer
     footer_text: "© 2026 Lisbon Medical Booking · All rights reserved"
   },
-
   pt: {
-    theme_btn: "Modo Escuro",
+    theme_label: "Tema:",
+    theme_light: "Claro",
+    theme_dark: "Escuro",
     lang_label: "Idioma",
     lang_en: "English",
     lang_pt: "Português",
@@ -63,9 +55,10 @@ const translations = {
     note_box: "📌 Запис до лікаря Лісабон платно — serviço de marcação de consultas médicas pagas em Lisboa. A taxa final depende do tipo de consulta e clínica, com um máximo de 50 euros.",
     footer_text: "© 2026 Lisbon Medical Booking · Todos os direitos reservados"
   },
-
   "pt-br": {
-    theme_btn: "Modo Escuro",
+    theme_label: "Tema:",
+    theme_light: "Claro",
+    theme_dark: "Escuro",
     lang_label: "Idioma",
     lang_en: "English",
     lang_pt: "Português",
@@ -90,9 +83,10 @@ const translations = {
     note_box: "📌 Запис до лікаря Лісабон платно — serviço de agendamento médico pago em Lisboa. A taxa final depende do tipo de consulta e clínica, com um máximo de 50 euros.",
     footer_text: "© 2026 Lisbon Medical Booking · Todos os direitos reservados"
   },
-
   uk: {
-    theme_btn: "Темна тема",
+    theme_label: "Тема:",
+    theme_light: "Світла",
+    theme_dark: "Темна",
     lang_label: "Мова",
     lang_en: "English",
     lang_pt: "Português",
@@ -117,9 +111,10 @@ const translations = {
     note_box: "📌 Запис до лікаря Лісабон платно — платна послуга запису до лікаря в Лісабоні. Кінцева вартість залежить від типу консультації та клініки, з максимальною сумою 50 євро.",
     footer_text: "© 2026 Lisbon Medical Booking · Всі права захищено"
   },
-
   de: {
-    theme_btn: "Dunkelmodus",
+    theme_label: "Thema:",
+    theme_light: "Hell",
+    theme_dark: "Dunkel",
     lang_label: "Sprache",
     lang_en: "English",
     lang_pt: "Português",
@@ -146,13 +141,19 @@ const translations = {
   }
 };
 
-// ===== SET LANGUAGE =====
 function setLanguage(lang) {
-  const elements = document.querySelectorAll('[data-i18n]');
-  elements.forEach(el => {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key] !== undefined) {
       el.innerHTML = translations[lang][key];
+    }
+  });
+
+  const select = document.getElementById('themeSelect');
+  Array.from(select.options).forEach(opt => {
+    const key = opt.value;
+    if (translations[lang] && translations[lang][key] !== undefined) {
+      opt.text = translations[lang][key];
     }
   });
 
@@ -163,51 +164,27 @@ function setLanguage(lang) {
   localStorage.setItem('preferred_lang', lang);
 }
 
-// ===== SET THEME =====
 function setTheme(theme) {
-  if (theme === 'dark') {
-    document.body.classList.add('dark');
-    document.getElementById('themeToggle').innerHTML = '<i class="fas fa-sun"></i> <span data-i18n="theme_btn">Light Mode</span>';
-    localStorage.setItem('theme', 'dark');
-  } else {
-    document.body.classList.remove('dark');
-    document.getElementById('themeToggle').innerHTML = '<i class="fas fa-moon"></i> <span data-i18n="theme_btn">Dark Mode</span>';
-    localStorage.setItem('theme', 'light');
-  }
-  // Re-apply translation for theme button after changing HTML
-  const currentLang = localStorage.getItem('preferred_lang') || 'en';
-  const themeKey = 'theme_btn';
-  const themeBtn = document.querySelector('#themeToggle span');
-  if (themeBtn && translations[currentLang] && translations[currentLang][themeKey]) {
-    themeBtn.innerHTML = translations[currentLang][themeKey];
-  }
+  document.body.classList.remove('light', 'dark');
+  document.body.classList.add(theme);
+  document.getElementById('themeSelect').value = theme;
+  localStorage.setItem('theme', theme);
 }
 
-// ===== INIT =====
-document.addEventListener('DOMContentLoaded', () => {
-  // Language
+document.addEventListener('DOMContentLoaded', function() {
   const savedLang = localStorage.getItem('preferred_lang') || 'en';
   setLanguage(savedLang);
 
   document.querySelectorAll('.lang-buttons button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const lang = btn.dataset.lang;
-      setLanguage(lang);
-      // Update theme button text to match new language
-      const themeKey = 'theme_btn';
-      const themeBtn = document.querySelector('#themeToggle span');
-      if (themeBtn && translations[lang] && translations[lang][themeKey]) {
-        themeBtn.innerHTML = translations[lang][themeKey];
-      }
+    btn.addEventListener('click', function() {
+      setLanguage(this.dataset.lang);
     });
   });
 
-  // Theme
   const savedTheme = localStorage.getItem('theme') || 'light';
   setTheme(savedTheme);
 
-  document.getElementById('themeToggle').addEventListener('click', () => {
-    const isDark = document.body.classList.contains('dark');
-    setTheme(isDark ? 'light' : 'dark');
+  document.getElementById('themeSelect').addEventListener('change', function(e) {
+    setTheme(e.target.value);
   });
 });
