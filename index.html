@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,22 +10,31 @@
 </head>
 <body>
 
-  <!-- Theme Toggle -->
-  <div class="theme-bar">
-    <button id="themeToggle" class="theme-btn">
-      <i class="fas fa-moon"></i> <span data-i18n="theme_btn">Dark Mode</span>
-    </button>
-  </div>
+  <!-- Theme & Language Bar -->
+  <div class="top-bar">
+    <div class="theme-selector">
+      <label data-i18n="theme_label">Theme:</label>
+      <select id="themeSelect">
+        <option value="light" data-i18n="theme_light">Light</option>
+        <option value="dark-blue" data-i18n="theme_darkblue">Dark Blue</option>
+        <option value="dark-purple" data-i18n="theme_darkpurple">Dark Purple</option>
+        <option value="dark-green" data-i18n="theme_darkgreen">Dark Green</option>
+        <option value="dark-red" data-i18n="theme_darkred">Dark Red</option>
+        <option value="gradient-sunset" data-i18n="theme_sunset">Sunset Gradient</option>
+        <option value="gradient-ocean" data-i18n="theme_ocean">Ocean Gradient</option>
+        <option value="gradient-forest" data-i18n="theme_forest">Forest Gradient</option>
+      </select>
+    </div>
 
-  <!-- Language Bar -->
-  <div class="language-bar">
-    <span><i class="fas fa-globe"></i> <span data-i18n="lang_label">Language</span></span>
-    <div class="lang-buttons">
-      <button data-lang="en" class="active">🇬🇧 <span data-i18n="lang_en">English</span></button>
-      <button data-lang="pt">🇵🇹 <span data-i18n="lang_pt">Português</span></button>
-      <button data-lang="pt-br">🇧🇷 <span data-i18n="lang_ptbr">Português (BR)</span></button>
-      <button data-lang="uk">🇺🇦 <span data-i18n="lang_uk">Українська</span></button>
-      <button data-lang="de">🇩🇪 <span data-i18n="lang_de">Deutsch</span></button>
+    <div class="language-bar">
+      <span><i class="fas fa-globe"></i> <span data-i18n="lang_label">Language</span></span>
+      <div class="lang-buttons">
+        <button data-lang="en" class="active">🇬🇧 <span data-i18n="lang_en">English</span></button>
+        <button data-lang="pt">🇵🇹 <span data-i18n="lang_pt">Português</span></button>
+        <button data-lang="pt-br">🇧🇷 <span data-i18n="lang_ptbr">Português (BR)</span></button>
+        <button data-lang="uk">🇺🇦 <span data-i18n="lang_uk">Українська</span></button>
+        <button data-lang="de">🇩🇪 <span data-i18n="lang_de">Deutsch</span></button>
+      </div>
     </div>
   </div>
 
