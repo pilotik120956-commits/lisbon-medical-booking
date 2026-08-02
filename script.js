@@ -1,126 +1,213 @@
 const translations = {
   en: {
+    // Theme
+    theme_btn: "Dark Mode",
+
+    // Language bar
+    lang_label: "Language",
+    lang_en: "English",
+    lang_pt: "Português",
+    lang_ptbr: "Português (BR)",
+    lang_uk: "Українська",
+    lang_de: "Deutsch",
+
+    // Hero
     hero_title: "📅 Lisbon Medical · Telegram Booking",
-    hero_sub: "Fast, secure and human — book your appointment in any clinic across Lisbon.",
+    hero_sub: "Appointment booking service for medical institutions in Lisbon.",
     price_label: "Consultation fee",
-    price_note: "(depends on the specialist)",
+    price_note: "(depending on specialist)",
     cta_btn: "Book via Telegram",
-    card1_title: "All clinics in Lisbon",
-    card1_desc: "Public and private — we connect you with the right doctor, anywhere in the city.",
-    card2_title: "Specialists",
-    card2_desc: "General practice, cardiology, dermatology, pediatrics, and more.",
-    card3_title: "Same‑day slots",
-    card3_desc: "We find the earliest available appointment that fits your schedule.",
-    how_title: "⚡ How it works",
-    step1: "Click \"Book via Telegram\" or write to @NataliiaBrovko.",
-    step2: "Tell us your symptoms, preferred clinic, and time.",
-    step3: "We confirm the doctor, price (≤ 50€), and send you the booking.",
-    note_box: "📌 \"Запис до лікаря Лісабон платно\" — this means \"Paid doctor booking in Lisbon\". The final cost depends on the consultation and clinic, but never exceeds 50 euros.",
-    footer_made: "Made with ❤️ for easy healthcare access"
+
+    // Features
+    card1_title: "Lisbon Clinics",
+    card1_desc: "Access to public and private healthcare facilities across the Lisbon metropolitan area.",
+    card2_title: "Medical Specialists",
+    card2_desc: "General practice, cardiology, dermatology, pediatrics, and other specialised fields.",
+    card3_title: "Same‑day Appointments",
+    card3_desc: "Selection of the earliest available time slot that meets patient requirements.",
+
+    // How it works
+    how_title: "⚡ Service Procedure",
+    step1: "Submit a booking request via Telegram @NataliiaBrovko.",
+    step2: "Provide medical indication, preferred clinic, and available time.",
+    step3: "Receive confirmation of specialist, fee (≤ 50€), and appointment details.",
+    note_box: "📌 Запис до лікаря Лісабон платно — paid medical appointment booking service in Lisbon. The final fee depends on the consultation type and clinic, with a maximum of 50 euros.",
+
+    // Footer
+    footer_text: "© 2026 Lisbon Medical Booking · All rights reserved"
   },
+
   pt: {
+    theme_btn: "Modo Escuro",
+    lang_label: "Idioma",
+    lang_en: "English",
+    lang_pt: "Português",
+    lang_ptbr: "Português (BR)",
+    lang_uk: "Українська",
+    lang_de: "Deutsch",
     hero_title: "📅 Lisboa Médica · Marcação por Telegram",
-    hero_sub: "Rápido, seguro e humano — marque a sua consulta em qualquer clínica de Lisboa.",
+    hero_sub: "Serviço de marcação de consultas para instituições médicas em Lisboa.",
     price_label: "Taxa de consulta",
     price_note: "(depende do especialista)",
     cta_btn: "Marcar via Telegram",
-    card1_title: "Todas as clínicas em Lisboa",
-    card1_desc: "Públicas e privadas — ligamo-lo ao médico certo, em qualquer lugar da cidade.",
-    card2_title: "Especialistas",
-    card2_desc: "Medicina geral, cardiologia, dermatologia, pediatria e mais.",
-    card3_title: "Vagas no mesmo dia",
-    card3_desc: "Encontramos a consulta disponível mais cedo que se ajusta à sua agenda.",
-    how_title: "⚡ Como funciona",
-    step1: "Clique em \"Marcar via Telegram\" ou escreva para @NataliiaBrovko.",
-    step2: "Diga-nos os seus sintomas, clínica preferida e horário.",
-    step3: "Confirmamos o médico, o preço (≤ 50€) e enviamos a marcação.",
-    note_box: "📌 \"Запис до лікаря Лісабон платно\" — significa \"marcação paga de médico em Lisboa\". O custo final depende da consulta e da clínica, mas nunca excede 50 euros.",
-    footer_made: "Feito com ❤️ para facilitar o acesso à saúde"
+    card1_title: "Clínicas em Lisboa",
+    card1_desc: "Acesso a unidades de saúde públicas e privadas na área metropolitana de Lisboa.",
+    card2_title: "Especialistas Médicos",
+    card2_desc: "Medicina geral, cardiologia, dermatologia, pediatria e outras áreas especializadas.",
+    card3_title: "Consultas no Mesmo Dia",
+    card3_desc: "Seleção do horário disponível mais cedo que atende aos requisitos do paciente.",
+    how_title: "⚡ Procedimento do Serviço",
+    step1: "Envie um pedido de marcação via Telegram @NataliiaBrovko.",
+    step2: "Informe a indicação médica, clínica preferida e horário disponível.",
+    step3: "Receba a confirmação do especialista, taxa (≤ 50€) e detalhes da consulta.",
+    note_box: "📌 Запис до лікаря Лісабон платно — serviço de marcação de consultas médicas pagas em Lisboa. A taxa final depende do tipo de consulta e clínica, com um máximo de 50 euros.",
+    footer_text: "© 2026 Lisbon Medical Booking · Todos os direitos reservados"
   },
+
   "pt-br": {
+    theme_btn: "Modo Escuro",
+    lang_label: "Idioma",
+    lang_en: "English",
+    lang_pt: "Português",
+    lang_ptbr: "Português (BR)",
+    lang_uk: "Українська",
+    lang_de: "Deutsch",
     hero_title: "📅 Lisboa Médica · Agendamento via Telegram",
-    hero_sub: "Rápido, seguro e humano — agende sua consulta em qualquer clínica de Lisboa.",
+    hero_sub: "Serviço de agendamento de consultas para instituições médicas em Lisboa.",
     price_label: "Taxa de consulta",
     price_note: "(depende do especialista)",
     cta_btn: "Agendar via Telegram",
-    card1_title: "Todas as clínicas em Lisboa",
-    card1_desc: "Públicas e privadas — conectamos você ao médico certo, em qualquer lugar da cidade.",
-    card2_title: "Especialistas",
-    card2_desc: "Clínico geral, cardiologia, dermatologia, pediatria e mais.",
-    card3_title: "Vagas no mesmo dia",
-    card3_desc: "Encontramos o horário disponível mais cedo que se encaixa na sua agenda.",
-    how_title: "⚡ Como funciona",
-    step1: "Clique em \"Agendar via Telegram\" ou escreva para @NataliiaBrovko.",
-    step2: "Conte-nos seus sintomas, clínica preferida e horário.",
-    step3: "Confirmamos o médico, o preço (≤ 50€) e enviamos o agendamento.",
-    note_box: "📌 \"Запис до лікаря Лісабон платно\" — significa \"agendamento pago de médico em Lisboa\". O custo final depende da consulta e da clínica, mas nunca excede 50 euros.",
-    footer_made: "Feito com ❤️ para facilitar o acesso à saúde"
+    card1_title: "Clínicas em Lisboa",
+    card1_desc: "Acesso a unidades de saúde públicas e privadas na região metropolitana de Lisboa.",
+    card2_title: "Especialistas Médicos",
+    card2_desc: "Clínico geral, cardiologia, dermatologia, pediatria e outras áreas especializadas.",
+    card3_title: "Agendamento no Mesmo Dia",
+    card3_desc: "Seleção do horário disponível mais cedo que atende às necessidades do paciente.",
+    how_title: "⚡ Procedimento do Serviço",
+    step1: "Envie uma solicitação de agendamento via Telegram @NataliiaBrovko.",
+    step2: "Informe a indicação médica, clínica preferida e horário disponível.",
+    step3: "Receba a confirmação do especialista, taxa (≤ 50€) e detalhes do agendamento.",
+    note_box: "📌 Запис до лікаря Лісабон платно — serviço de agendamento médico pago em Lisboa. A taxa final depende do tipo de consulta e clínica, com um máximo de 50 euros.",
+    footer_text: "© 2026 Lisbon Medical Booking · Todos os direitos reservados"
   },
+
   uk: {
+    theme_btn: "Темна тема",
+    lang_label: "Мова",
+    lang_en: "English",
+    lang_pt: "Português",
+    lang_ptbr: "Português (BR)",
+    lang_uk: "Українська",
+    lang_de: "Deutsch",
     hero_title: "📅 Лісабон Медичний · Запис через Telegram",
-    hero_sub: "Швидко, надійно та по-людськи — запишіться до лікаря в будь-яку клініку Лісабона.",
+    hero_sub: "Сервіс запису на прийом до медичних закладів Лісабона.",
     price_label: "Вартість консультації",
     price_note: "(залежить від спеціаліста)",
     cta_btn: "Записатися через Telegram",
-    card1_title: "Всі клініки Лісабона",
-    card1_desc: "Державні та приватні — ми знайдемо потрібного лікаря в будь-якому районі міста.",
-    card2_title: "Спеціалісти",
-    card2_desc: "Терапія, кардіологія, дерматологія, педіатрія та інше.",
-    card3_title: "Сьогоднішні слоти",
-    card3_desc: "Ми підберемо найближчий вільний час, зручний для вас.",
-    how_title: "⚡ Як це працює",
-    step1: "Натисніть «Записатися через Telegram» або напишіть @NataliiaBrovko.",
-    step2: "Розкажіть про симптоми, бажану клініку та зручний час.",
-    step3: "Ми підтвердимо лікаря, ціну (≤ 50€) і надішлемо запис.",
-    note_box: "📌 «Запис до лікаря Лісабон платно» — це означає платний запис до лікаря в Лісабоні. Кінцева вартість залежить від консультації та клініки, але не перевищує 50 євро.",
-    footer_made: "Зроблено з ❤️ для легкого доступу до медицини"
+    card1_title: "Клініки Лісабона",
+    card1_desc: "Доступ до державних та приватних медичних закладів у столичному регіоні.",
+    card2_title: "Медичні спеціалісти",
+    card2_desc: "Терапія, кардіологія, дерматологія, педіатрія та інші спеціалізовані напрямки.",
+    card3_title: "Запис на сьогодні",
+    card3_desc: "Підбір найближчого доступного часу, що відповідає вимогам пацієнта.",
+    how_title: "⚡ Порядок надання послуги",
+    step1: "Надішліть запит на запис через Telegram @NataliiaBrovko.",
+    step2: "Надайте медичні показання, бажану клініку та зручний час.",
+    step3: "Отримайте підтвердження спеціаліста, вартості (≤ 50€) та деталі запису.",
+    note_box: "📌 Запис до лікаря Лісабон платно — платна послуга запису до лікаря в Лісабоні. Кінцева вартість залежить від типу консультації та клініки, з максимальною сумою 50 євро.",
+    footer_text: "© 2026 Lisbon Medical Booking · Всі права захищено"
   },
+
   de: {
+    theme_btn: "Dunkelmodus",
+    lang_label: "Sprache",
+    lang_en: "English",
+    lang_pt: "Português",
+    lang_ptbr: "Português (BR)",
+    lang_uk: "Українська",
+    lang_de: "Deutsch",
     hero_title: "📅 Lissabon Medizin · Termin über Telegram",
-    hero_sub: "Schnell, sicher und menschlich — buchen Sie Ihren Termin in jeder Klinik in Lissabon.",
+    hero_sub: "Terminbuchungsdienst für medizinische Einrichtungen in Lissabon.",
     price_label: "Konsultationsgebühr",
     price_note: "(abhängig vom Facharzt)",
     cta_btn: "Über Telegram buchen",
-    card1_title: "Alle Kliniken in Lissabon",
-    card1_desc: "Öffentlich und privat — wir verbinden Sie mit dem richtigen Arzt, überall in der Stadt.",
+    card1_title: "Kliniken in Lissabon",
+    card1_desc: "Zugang zu öffentlichen und privaten Gesundheitseinrichtungen im Großraum Lissabon.",
     card2_title: "Fachärzte",
-    card2_desc: "Allgemeinmedizin, Kardiologie, Dermatologie, Pädiatrie und mehr.",
+    card2_desc: "Allgemeinmedizin, Kardiologie, Dermatologie, Pädiatrie und andere Fachbereiche.",
     card3_title: "Termine am gleichen Tag",
-    card3_desc: "Wir finden den frühesten verfügbaren Termin, der in Ihren Zeitplan passt.",
-    how_title: "⚡ So funktioniert es",
-    step1: "Klicken Sie auf \"Über Telegram buchen\" oder schreiben Sie an @NataliiaBrovko.",
-    step2: "Teilen Sie uns Ihre Symptome, bevorzugte Klinik und Zeit mit.",
-    step3: "Wir bestätigen den Arzt, den Preis (≤ 50€) und senden Ihnen die Buchung.",
-    note_box: "📌 \"Запис до лікаря Лісабон платно\" — bedeutet \"bezahlte Arztbuchung in Lissabon\". Der endgültige Preis hängt von der Konsultation und der Klinik ab, übersteigt aber nie 50 Euro.",
-    footer_made: "Mit ❤️ gemacht für einfachen Zugang zur Gesundheitsversorgung"
+    card3_desc: "Auswahl des frühestmöglichen Termins, der den Anforderungen des Patienten entspricht.",
+    how_title: "⚡ Serviceablauf",
+    step1: "Senden Sie eine Buchungsanfrage über Telegram @NataliiaBrovko.",
+    step2: "Geben Sie die medizinische Indikation, bevorzugte Klinik und verfügbare Zeit an.",
+    step3: "Erhalten Sie die Bestätigung des Facharztes, der Gebühr (≤ 50€) und der Termindetails.",
+    note_box: "📌 Запис до лікаря Лісабон платно — kostenpflichtiger Arztbuchungsdienst in Lissabon. Die endgültige Gebühr hängt von der Art der Konsultation und der Klinik ab, mit einem Maximum von 50 Euro.",
+    footer_text: "© 2026 Lisbon Medical Booking · Alle Rechte vorbehalten"
   }
 };
 
+// ===== SET LANGUAGE =====
 function setLanguage(lang) {
   const elements = document.querySelectorAll('[data-i18n]');
   elements.forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[lang] && translations[lang][key]) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.placeholder = translations[lang][key];
-      } else {
-        el.innerHTML = translations[lang][key];
-      }
+    if (translations[lang] && translations[lang][key] !== undefined) {
+      el.innerHTML = translations[lang][key];
     }
   });
+
   document.querySelectorAll('.lang-buttons button').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+
   localStorage.setItem('preferred_lang', lang);
 }
 
+// ===== SET THEME =====
+function setTheme(theme) {
+  if (theme === 'dark') {
+    document.body.classList.add('dark');
+    document.getElementById('themeToggle').innerHTML = '<i class="fas fa-sun"></i> <span data-i18n="theme_btn">Light Mode</span>';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.body.classList.remove('dark');
+    document.getElementById('themeToggle').innerHTML = '<i class="fas fa-moon"></i> <span data-i18n="theme_btn">Dark Mode</span>';
+    localStorage.setItem('theme', 'light');
+  }
+  // Re-apply translation for theme button after changing HTML
+  const currentLang = localStorage.getItem('preferred_lang') || 'en';
+  const themeKey = 'theme_btn';
+  const themeBtn = document.querySelector('#themeToggle span');
+  if (themeBtn && translations[currentLang] && translations[currentLang][themeKey]) {
+    themeBtn.innerHTML = translations[currentLang][themeKey];
+  }
+}
+
+// ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('preferred_lang') || 'en';
-  setLanguage(saved);
+  // Language
+  const savedLang = localStorage.getItem('preferred_lang') || 'en';
+  setLanguage(savedLang);
 
   document.querySelectorAll('.lang-buttons button').forEach(btn => {
     btn.addEventListener('click', () => {
-      setLanguage(btn.dataset.lang);
+      const lang = btn.dataset.lang;
+      setLanguage(lang);
+      // Update theme button text to match new language
+      const themeKey = 'theme_btn';
+      const themeBtn = document.querySelector('#themeToggle span');
+      if (themeBtn && translations[lang] && translations[lang][themeKey]) {
+        themeBtn.innerHTML = translations[lang][themeKey];
+      }
     });
+  });
+
+  // Theme
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  setTheme(savedTheme);
+
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const isDark = document.body.classList.contains('dark');
+    setTheme(isDark ? 'light' : 'dark');
   });
 });
