@@ -21,7 +21,7 @@ const translations = {
     card3_title: "Same‑day Appointments",
     card3_desc: "Selection of the earliest available time slot that meets patient requirements.",
     how_title: "⚡ Service Procedure",
-    step1: "Submit a booking request via Telegram @NataliiaBrovko.",
+    step1: "Click the button and send the pre-filled message.",
     step2: "Provide medical indication, preferred clinic, and available time.",
     step3: "Receive confirmation of specialist, fee (≤ 50€), and appointment details.",
     note_box: "📌 Запис до лікаря Лісабон платно — paid medical appointment booking service in Lisbon. The final fee depends on the consultation type and clinic, with a maximum of 50 euros.",
@@ -49,7 +49,7 @@ const translations = {
     card3_title: "Consultas no Mesmo Dia",
     card3_desc: "Seleção do horário disponível mais cedo que atende aos requisitos do paciente.",
     how_title: "⚡ Procedimento do Serviço",
-    step1: "Envie um pedido de marcação via Telegram @NataliiaBrovko.",
+    step1: "Clique no botão e envie a mensagem pré-preenchida.",
     step2: "Informe a indicação médica, clínica preferida e horário disponível.",
     step3: "Receba a confirmação do especialista, taxa (≤ 50€) e detalhes da consulta.",
     note_box: "📌 Запис до лікаря Лісабон платно — serviço de marcação de consultas médicas pagas em Lisboa. A taxa final depende do tipo de consulta e clínica, com um máximo de 50 euros.",
@@ -77,7 +77,7 @@ const translations = {
     card3_title: "Agendamento no Mesmo Dia",
     card3_desc: "Seleção do horário disponível mais cedo que atende às necessidades do paciente.",
     how_title: "⚡ Procedimento do Serviço",
-    step1: "Envie uma solicitação de agendamento via Telegram @NataliiaBrovko.",
+    step1: "Clique no botão e envie a mensagem pré-preenchida.",
     step2: "Informe a indicação médica, clínica preferida e horário disponível.",
     step3: "Receba a confirmação do especialista, taxa (≤ 50€) e detalhes do agendamento.",
     note_box: "📌 Запис до лікаря Лісабон платно — serviço de agendamento médico pago em Lisboa. A taxa final depende do tipo de consulta e clínica, com um máximo de 50 euros.",
@@ -105,7 +105,7 @@ const translations = {
     card3_title: "Запис на сьогодні",
     card3_desc: "Підбір найближчого доступного часу, що відповідає вимогам пацієнта.",
     how_title: "⚡ Порядок надання послуги",
-    step1: "Надішліть запит на запис через Telegram @NataliiaBrovko.",
+    step1: "Натисніть кнопку та надішліть готове повідомлення.",
     step2: "Надайте медичні показання, бажану клініку та зручний час.",
     step3: "Отримайте підтвердження спеціаліста, вартості (≤ 50€) та деталі запису.",
     note_box: "📌 Запис до лікаря Лісабон платно — платна послуга запису до лікаря в Лісабоні. Кінцева вартість залежить від типу консультації та клініки, з максимальною сумою 50 євро.",
@@ -133,12 +133,21 @@ const translations = {
     card3_title: "Termine am gleichen Tag",
     card3_desc: "Auswahl des frühestmöglichen Termins, der den Anforderungen des Patienten entspricht.",
     how_title: "⚡ Serviceablauf",
-    step1: "Senden Sie eine Buchungsanfrage über Telegram @NataliiaBrovko.",
+    step1: "Klicken Sie auf den Button und senden Sie die vorbereitete Nachricht.",
     step2: "Geben Sie die medizinische Indikation, bevorzugte Klinik und verfügbare Zeit an.",
     step3: "Erhalten Sie die Bestätigung des Facharztes, der Gebühr (≤ 50€) und der Termindetails.",
     note_box: "📌 Запис до лікаря Лісабон платно — kostenpflichtiger Arztbuchungsdienst in Lissabon. Die endgültige Gebühr hängt von der Art der Konsultation und der Klinik ab, mit einem Maximum von 50 Euro.",
     footer_text: "© 2026 Lisbon Medical Booking · Alle Rechte vorbehalten"
   }
+};
+
+// ===== ТЕКСТИ ДЛЯ TELEGRAM =====
+const telegramTexts = {
+  en: "Hello! I would like to book an appointment with a doctor in Lisbon. Please provide me with available options.",
+  pt: "Olá! Gostaria de marcar uma consulta com um médico em Lisboa. Por favor, forneça-me as opções disponíveis.",
+  "pt-br": "Olá! Gostaria de agendar uma consulta com um médico em Lisboa. Por favor, me forneça as opções disponíveis.",
+  uk: "Привіт! Хочу записатися до лікаря в Лісабоні. Будь ласка, надайте доступні варіанти.",
+  de: "Hallo! Ich möchte einen Termin bei einem Arzt in Lissabon buchen. Bitte geben Sie mir verfügbare Optionen."
 };
 
 function setLanguage(lang) {
@@ -161,7 +170,20 @@ function setLanguage(lang) {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
 
+  // Оновлюємо посилання на Telegram
+  updateTelegramLink(lang);
+
   localStorage.setItem('preferred_lang', lang);
+}
+
+function updateTelegramLink(lang) {
+  const text = telegramTexts[lang] || telegramTexts.en;
+  const encodedText = encodeURIComponent(text);
+  const url = `https://t.me/NataliiaBrovko?text=${encodedText}`;
+
+  document.querySelectorAll('#telegramLink, #telegramLinkFooter').forEach(link => {
+    link.href = url;
+  });
 }
 
 function setTheme(theme) {
